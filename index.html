@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery带音效旋转式动画切换幻灯片特效</title>
+
+
+
+<link href="css/jquery.rotatingSlideshow.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<script src="js/jquery-2.1.1.min.js"></script>
+
+<script src="js/jquery.rotatingSlideshow.js"></script>
+
+</head>
+<body>
+
+	
+<div class="banner  mauto"> <img src="img/banner.png" width="100%">
+	<div class="box1">
+         <ul class="nav">
+             <li class="lilogo"><img src="img/logo.png" width="80%"></li>
+	         <li><a href="#">首页</a></li>
+	         <li><a href="#">网站建设</a></li>
+	         <li><a href="#">成功案例</a></li>
+	         <li><a href="#">网络推广</a></li>
+	         <li><a href="#">APP开发</a></li>
+	         <li><a href="#">微信开发</a></li>
+	         <li><a href="#">关于鸿邦</a></li>
+	         <li><a href="#">新闻中心</a></li>
+	         <li><a href="#">联系我们</a></li>
+	         <div class="clearfix"></div>
+	</ul>
+	</div>	
+</div>
+<div class="business  mauto">
+	
+	<div class="box2">
+		<ul class="fleft p20">
+			<li class="b1">
+			<div class="bid1"><a href="#"><img src="img/sadajh.png"></a></div>
+			<div class="b1d2">网站建设</div>
+			<div class="b1d3">鸿邦科技顶尖设计意团队，为您量身定制高
+			端互动网站</div>
+			<div class="b1d4"><a href="#">了解更多</a></div>
+			</li>			
+		</ul>
+		<ul class="fleft p20">
+			<li class="b1">
+			<div class="bid1"><a href="#"><img src="img/asdfas.png"></a></div>
+			<div class="b1d2">APP开发</div>
+			<div class="b1d3">安卓(Android)、Iphone(IOS)等手机APP软件开发</div>
+			<div class="b1d4"><a href="#">了解更多</a></div>
+			</li>			
+		</ul>
+		<ul class="fleft p20">
+			<li class="b1">
+			<div class="bid1"><a href="#"><img src="img/icon-weixin.png"></a></div>
+			<div class="b1d2">微信开发</div>
+			<div class="b1d3">微信公众号、小程序、微信营销、我们更懂企业需要什么</div>
+			<div class="b1d4"><a href="#">了解更多</a></div>
+			</li>			
+		</ul>
+		<ul class="fleft p20">
+			<li class="b1">
+			<div class="bid1"><a href="#"><img src="img/icon-seo.png"></a></div>
+			<div class="b1d2">网络推广</div>
+			<div class="b1d3">搜索引擎竞价推广、SEM整合营销方案制定、执行一站式服务</div>
+			<div class="b1d4"><a href="#">了解更多</a></div>
+			</li>			
+		</ul>	
+		<div class="clearfix"></div>	
+	</div>	
+</div>
+
+
+    <div class="wedone mauto">
+	<div class="f36w">我们已经做了这些项目</div>
+<div class="wedonebox mauto">
+	<div class="wedonea fleft">
+		<div><img src="img/asdf3.png"></div>
+		<div class="wedone1">1289</div>
+		<div class="wedone2">网站建设数量</div>
+		
+	</div>
+	<div class="wedonea fleft">
+		<div><img src="img/xzdf.png"></div>
+		<div class="wedone1">280</div>
+		<div class="wedone2">APP开发数量</div>
+		
+	</div><div class="wedonea fleft">
+		<div><img src="img/4th.png"></div>
+		<div class="wedone1">97</div>
+		<div class="wedone2">微信开发数量</div>
+		
+	</div><div class="wedonea fleft">
+		<div><img src="img/jytj.png"></div>
+		<div class="wedone1">128</div>
+		<div class="wedone2">网络推广企业</div>
+		<div class="clearfix"></div>
+	</div>	
+</div>	
+</div>
+
+<div class="anli mauto ptb100">
+<div><img src="img/title1.png"></div>
+<div class="box">
+	<div class="list">
+		<ul>
+			<li class="p7"><a href="#"><img class="imgj" src="img/1.png" alt="" /></a></li>
+			<li class="p6"><a href="#"><img class="imgj" src="img/2.png"></a></li>
+			<li class="p5"><a href="#"><img class="imgj" src="img/3.png" alt="" /></a></li>
+			<li class="p4"><a href="#"><img class="imgj" src="img/44.jpg"></a></li>
+			<li class="p3"><a href="#"><img class="imgj" src="img/55.jpg"></a></li>
+			<li class="p2"><a href="#"><img class="imgj" src="img/66.jpg" alt="" /></a></li>
+			<li class="p1"><a href="#"><img class="imgj" src="img/77.jpg"></a></li>
+		</ul>
+	</div>
+	
+	<a href="javascript:;" class="prev btn"> < </a>
+	<a href="javascript:;" class="next btn"> > </a>
+
+	<div class="buttons">
+		<a href="javascript:;"><span></span></a>
+		<a href="javascript:;"><span></span></a>
+		<a href="javascript:;"><span></span></a>
+		<a href="javascript:;"><span></span></a>
+		<a href="javascript:;"><span></span></a>
+		<a href="javascript:;"><span></span></a>
+		<a href="javascript:;"><span></span></a>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+var $a=$(".buttons a");
+var $s=$(".buttons span");
+var cArr=["p7","p6","p5","p4","p3","p2","p1"];
+var index=0;
+$(".next").click(
+	function(){
+	nextimg();
+	}
+)
+$(".prev").click(
+	function(){
+	previmg();
+	}
+)
+//上一张
+function previmg(){
+	cArr.unshift(cArr[6]);
+	cArr.pop();
+	//i是元素的索引，从0开始
+	//e为当前处理的元素
+	//each循环，当前处理的元素移除所有的class，然后添加数组索引i的class
+	$(".box li").each(function(i,e){
+		$(e).removeClass().addClass(cArr[i]);
+	})
+	index--;
+	if (index<0) {
+		index=6;
+	}
+	show();
+}
+
+//下一张
+function nextimg(){
+	cArr.push(cArr[0]);
+	cArr.shift();
+	$(".box li").each(function(i,e){
+		$(e).removeClass().addClass(cArr[i]);
+	})
+	index++;
+	if (index>6) {
+		index=0;
+	}
+	show();
+}
+
+//通过底下按钮点击切换
+$a.each(function(){
+	$(this).click(function(){
+		var myindex=$(this).index();
+		var b=myindex-index;
+		if(b==0){
+			return;
+		}
+		else if(b>0) {
+			/*
+			 * splice(0,b)的意思是从索引0开始,取出数量为b的数组
+			 * 因为每次点击之后数组都被改变了,所以当前显示的这个照片的索引才是0
+			 * 所以取出从索引0到b的数组,就是从原本的这个照片到需要点击的照片的数组
+			 * 这时候原本的数组也将这部分数组进行移除了
+			 * 再把移除的数组添加的原本的数组的后面
+			 */
+			var newarr=cArr.splice(0,b);
+			cArr=$.merge(cArr,newarr);
+			$(".box li").each(function(i,e){
+			$(e).removeClass().addClass(cArr[i]);
+			})
+			index=myindex;
+			show();
+		}
+		else if(b<0){
+			/*
+			 * 因为b<0,所以取数组的时候是倒序来取的,也就是说我们可以先把数组的顺序颠倒一下
+			 * 而b现在是负值,所以取出索引0到-b即为需要取出的数组
+			 * 也就是从原本的照片到需要点击的照片的数组
+			 * 然后将原本的数组跟取出的数组进行拼接
+			 * 再次倒序,使原本的倒序变为正序
+			 */
+			cArr.reverse();
+			var oldarr=cArr.splice(0,-b)
+			cArr=$.merge(cArr,oldarr);
+			cArr.reverse();
+			$(".box li").each(function(i,e){
+			$(e).removeClass().addClass(cArr[i]);
+			})
+			index=myindex;
+			show();
+		}
+	})
+})
+
+//改变底下按钮的背景色
+function show(){
+		$($s).eq(index).addClass("blue").parent().siblings().children().removeClass("blue");
+}
+
+//点击class为p2的元素触发上一张照片的函数
+$(document).on("click",".p2",function(){
+	previmg();
+	return false;//返回一个false值，让a标签不跳转
+});
+
+//点击class为p4的元素触发下一张照片的函数
+$(document).on("click",".p4",function(){
+	nextimg();
+	return false;
+});
+
+//			鼠标移入box时清除定时器
+$(".box").mouseover(function(){
+	clearInterval(timer);
+})
+
+//			鼠标移出box时开始定时器
+$(".box").mouseleave(function(){
+	timer=setInterval(nextimg,4000);
+})
+
+//			进入页面自动开始定时器
+timer=setInterval(nextimg,4000);
+</script>
+
+	
+</div>
+<div class="advantage ptb100">
+<div><img src="img/title.png"></div>
+<ul class="youshiul">
+    <li class="youshia"><img src="img/6u45.png" width="100%"> <div class="experiencea">			                
+			               <div class="experiencein1">丰富的行业经验</div>
+							<div class="experiencein2">创立至今已为几千家客户提供了互联网技术支持与服务我们更懂您和您的客户为您提供一站式系统化的网站建设服务</div>
+			                </div>	
+	</li>
+   	<li class="youshib"><img src="img/7a.png" width="100%"> <div class="experienceb">			                
+			               <div class="experiencein1">强大的设计力量和技术团队</div>
+							<div class="experiencein2">全部使用响应式制作，标准化作业体系时刻关注并追赶当前技术前沿永不落时代JQuery、HTML5、Css3</div>
+			                </div>	
+	</li>
+   	<li class="youshic"><img src="img/45645.png" width="100%"> <div class="experiencec">			                
+			               <div class="experiencein1">高效的运维与客服</div>
+							<div class="experiencein2">严格控制每位客服的服务家数，全天候的客服支持随时随地为您提供一切关于互联网问题的解决接口</div>
+			                </div>	
+	</li>
+    	
+   	<li class="youshid"><img src="img/fg5.png" width="100%"> <div class="experienced">			                
+			               <div class="experiencein1">品牌与规模</div>
+							<div class="experiencein2">2014年01月22日，经历3年的创业发展历程目前拥有3家分公司，拥有技术人员客服人员、营销顾问等100人</div>
+			                </div>	
+	</li>
+    	   	
+    	
+    	<div class="clearfix"></div>
+    </ul>
+	</div>
+	
+	
+<div class="cooperation xiangyingshi mauto">
+	<div class="hbkjys mauto"><span class="f36w0">合作项目</span></div>
+  <div class=" mauto f16w">鸿邦科技网络营销一站式服务标准制定者 多年实战经历打造互联网自动赚钱机器互联网营销一站式服务体系 祝您快速走上互联网+转型道路</div>
+  <div class="cooperation4">
+    
+		<div class="d275w fleft">
+		<div class="d275"><img src="img/ser1.png" width="100%">
+        <div class="d27550">
+        <a href="#">网站建设</a>
+        </div>
+        </div>
+        
+		<div class="f16w275 ">立刻开始</div>
+		</div>
+        
+        <div class="d275w fleft ">
+		<div class="d275"><img src="img/ser2.png" width="100%">
+        <div class="d27550">
+        <a href="#">软件开发</a>
+        </div>
+        </div>
+        
+		<div class="f16w275 "><a href="#">立刻开始</a></div>
+		</div>
+        
+        <div class="d275w fleft ">
+		<div class="d275"><img src="img/werqwe.png" width="100%">
+        <div class="d27550">
+        <a href="#">微信开发</a>
+        </div>
+        </div>
+        
+		<div class="f16w275"><a href="#"><span class="f16w275 ">立刻开始</span></a></div>
+		</div>
+        
+        <div class="d275w fleft ">
+		 <div class="d275"><img src="img/ser4 .png" width="100%">
+          <div class="d27550">
+          <a href="#">网络推广</a>
+          </div>
+         </div>
+        
+		<div class="f16w275"><a href="#"><span class="f16w275 ">立刻开始</span></a></div>
+		</div>
+        
+        <div class="clearfix"><div>
+        
+	</div>
+	
+	
+	
+</div>
+	</div>
+</div>
+	
+	
+	
+<div class="contact">
+<div class="contactbox mauto">
+	<input class="xingming" type="text" name="姓名" value="姓名">
+	<input class="xingming" type="text" name="电话" value="电话">
+	<input class="lxwom" type="button" name="联系我们" value="联系我们">	
+	</div>
+</div>
+<div class="news  mauto">
+	<div class="f36b">新闻中心</div>
+	<div class="color7e7f80 letter">NEWS TRENDS</div>
+	<div class="m1000 mauto">
+		<div class="line28 w384 fleft">
+		     <div><img src="img/036 .png" width="100%"></div>
+		     <div class="fleft f18b">平台动态</div>
+		     <div class="color7e7f80 clearfix"><div class="fleft">
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a>
+		            </div>
+		            <div class="fright">10-1
+		            <br>10-1
+		            <br>10-1
+		            <br>10-1
+		            <br>10-1
+		            <br>
+		            </div>
+		      <div class="clearfix"></div>
+		</div>
+		
+			
+			
+		</div>
+		
+		<div class="line28 w384  fleft margin15">
+		     <div><img src="img/035 .png" width="100%"></div>
+		     <div class="fleft f18b">帮助中心</div>
+		     <div class="color7e7f80 clearfix"><div class="fleft">
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a>
+		            </div>
+		            <div class="fright">10-1
+		            <br>10-1
+		            <br>10-1
+		            <br>10-1
+		            <br>10-1
+		            <br>
+		            </div>
+		      <div class="clearfix"></div>
+		</div>
+		
+			
+			
+		</div>
+		<div class="line28 w384 fleft margin15">
+		     <div><img src="img/034 .png" width="100%"></div>
+		     <div class="fleft f18b">行业资讯</div>
+		     <div class="color7e7f80 clearfix"><div class="fleft">
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a><br>
+		            <a href="#">▶ 企业网站应该多久备份一次</a>
+		            </div>
+		            <div class="fright">10-1
+		            <br>10-1
+		            <br>10-1
+		            <br>10-1
+		            <br>10-1
+		            <br>
+		            </div>
+		      <div class="clearfix"></div>
+		</div>
+		
+			
+			
+		</div>
+		<div class="clearfix"></div>
+		
+		
+		
+	</div>
+</div>
+<div class="foot1  mauto">
+<div class="foot12 mauto">
+	
+	
+	<div class="c808080 fleft">客服热线：400-660-5555<br>版权所有 © 2014-2017 Copyright © 2014-2017 300.cn All Rights Reserved<br>渝ICP证010249-2</div>
+	<div class="fright"><a herf="#"><img class="marginlr20" src="img/weibo.png"></a><a herf="#"><img class="marginlr20" src="img/weixin.png"></a><a herf="#"><img class="marginlr20" src="img/qq.png"></a></div>
+	<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</body>
+</html>
